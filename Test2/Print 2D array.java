@@ -1,26 +1,15 @@
-
-public class Solution {
-	
-	public static String minLengthWord(String str){
-		
-		int spaceIndex=0;
-		int startIndex=0;
-		int endIndex=0;
-		int minLength=Integer.MAX_VALUE;
-		for(int i=0;i<=str.length();i++) {
+public class solution {
+	public static void print2DArray(int arr[][]) {
+for(int i=0;i<arr.length;i++) {
 			
-			if(i==str.length() || str.charAt(i)==' ' ) {
-				int length= i-spaceIndex;
-				if(minLength > length) {
-					minLength=length;
-					startIndex=spaceIndex;
-					endIndex=i;
+			for(int k=0;k<(arr.length-i);k++) {
+				for(int j=0;j<arr[i].length;j++) {
+					System.out.print(arr[i][j]+" ");
 				}
-				spaceIndex=i+1;
+				System.out.println();
+				
 			}
-			 	
+			
 		}
-		return str.substring(startIndex,endIndex);
-
 	}
 }
